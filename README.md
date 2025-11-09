@@ -5,12 +5,14 @@ My personal Claude Code configuration for productive web development. This plugi
 ## Quick Install
 
 ```bash
-# Step 1: Add the marketplace
-/plugin marketplace add edmund-io/edmunds-claude-code
-
-# Step 2: Install the plugin
-/plugin install edmunds-claude-code
+# In your project directory
+git clone https://github.com/wcmrg77/claude-code-plugins.git temp-plugin
+cp -r temp-plugin/.claude ./
+cp -r temp-plugin/.claude-plugin ./
+rm -rf temp-plugin
 ```
+
+Plugin activates automatically in VS Code!
 
 ## What's Inside
 
@@ -64,27 +66,42 @@ My personal Claude Code configuration for productive web development. This plugi
 
 ## Installation
 
-### From GitHub (Recommended)
+### Method 1: Direct Copy (Simplest)
+
+Copy the plugin files directly into your project:
 
 ```bash
-# Add marketplace
-/plugin marketplace add edmund-io/edmunds-claude-code
-
-# Install plugin
-/plugin install edmunds-claude-code
+# In your project directory
+git clone https://github.com/wcmrg77/claude-code-plugins.git temp-plugin
+cp -r temp-plugin/.claude ./
+cp -r temp-plugin/.claude-plugin ./
+rm -rf temp-plugin
 ```
 
-### From Local Clone (for development)
+The plugin will automatically activate in VS Code.
+
+### Method 2: Git Submodule (For Updates)
+
+Keep the plugin synced across projects:
 
 ```bash
-git clone https://github.com/edmund-io/edmunds-claude-code.git
-cd edmunds-claude-code
+# In your project directory
+git submodule add https://github.com/wcmrg77/claude-code-plugins.git .claude-external
+ln -s .claude-external/.claude ./.claude
+ln -s .claude-external/.claude-plugin ./.claude-plugin
+```
 
-# Add as local marketplace
-/plugin marketplace add /path/to/edmunds-claude-code
+### Method 3: Symlink (Development)
 
-# Install plugin
-/plugin install edmunds-claude-code
+Use one plugin installation across all local projects:
+
+```bash
+# Clone once
+git clone https://github.com/wcmrg77/claude-code-plugins.git ~/claude-plugins
+
+# Then in each project
+ln -s ~/claude-plugins/.claude ./.claude
+ln -s ~/claude-plugins/.claude-plugin ./.claude-plugin
 ```
 
 ## Best For
