@@ -43,6 +43,7 @@ My personal Claude Code configuration for productive web development. This plugi
 ### 🤖 Specialized AI Agents (11)
 
 **Architecture & Planning**
+
 - **tech-stack-researcher** - Technology choice recommendations with trade-offs
 - **system-architect** - Scalable system architecture design
 - **backend-architect** - Backend systems with data integrity & security
@@ -50,11 +51,13 @@ My personal Claude Code configuration for productive web development. This plugi
 - **requirements-analyst** - Transform ideas into concrete specifications
 
 **Code Quality & Performance**
+
 - **refactoring-expert** - Systematic refactoring and clean code
 - **performance-engineer** - Measurement-driven optimization
 - **security-engineer** - Vulnerability identification and security standards
 
 **Documentation & Research**
+
 - **technical-writer** - Clear, comprehensive documentation
 - **learning-guide** - Teaching programming concepts progressively
 - **deep-research-agent** - Comprehensive research with adaptive strategies
@@ -111,6 +114,7 @@ cd edmunds-claude-code
 ### Research Tech Choices
 
 Just ask Claude questions like:
+
 - "Should I use WebSockets or SSE?"
 - "How should I structure this database?"
 - "What's the best library for X?"
@@ -120,6 +124,7 @@ The tech-stack-researcher agent automatically activates and provides detailed, r
 ## Philosophy
 
 This setup emphasizes:
+
 - **Type Safety**: Never uses `any` types
 - **Best Practices**: Follows modern Next.js/React patterns
 - **Productivity**: Reduces repetitive scaffolding
@@ -137,6 +142,7 @@ After installation, you can customize any command by editing files in `.claude/c
 ## Contributing
 
 Feel free to:
+
 - Fork and customize for your needs
 - Submit issues or suggestions
 - Share your improvements
